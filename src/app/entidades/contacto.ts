@@ -7,5 +7,4 @@ export class Contacto {
     public telefono: string
   ) {}
 
-  }
 }

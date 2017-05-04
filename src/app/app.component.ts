@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Contacto } from './entidades/contacto';
+import { ContactosService } from './servicios/contactos.service';
 
 @Component({
   selector: 'my-app',
@@ -10,25 +11,15 @@ export class AppComponent implements OnInit {
 
   listaContactos: Contacto[];
 
+  contactoSeleccionado: Contacto;
+
+  constructor( private _contactosService: ContactosService) {}
+
   ngOnInit(): void {
-    this.listaContactos = [
-      {
-        nombre: 'Steve Jobs',
-        email: 'steve.jobs@apple.com',
-        telefono: '64237846246'
-      },
-      {
-        nombre: 'Bill Gates',
-        email: 'bill.gates@microsoft.com',
-        telefono: '21878216381'
-      },
-      {
-        nombre: 'Elon Musk',
-        email: 'elon.musk@tesla.com',
-        telefono: '981293998711289'
-      }
-    ];
+    this.listaContactos = this._contactosService.obtenerContactos();
   }
 
-
+  mostrarDetalles(contacto: Contacto): void {
+    this.contactoSeleccionado = contacto;
+  }
 }
