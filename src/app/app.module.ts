@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent }  from './app.component';
+import { CajaComponent } from './ejemplos/caja.component';
+import { EjemplosBindingComponent} from './ejemplos/ejemplos-binding.component';
+import { EjemplosComponentesComponent} from './ejemplos/ejemplos-componentes.component';
+import { ListaContactosComponent } from './lista-contactos/lista-contactos.component';
 
 @NgModule({
   imports: [ // metemos todos los módulos que necesita mi app
@@ -10,7 +14,11 @@ import { AppComponent }  from './app.component';
     FormsModule
   ],
   declarations: [ // metemos todos los componentes, directivas y pipes
-    AppComponent
+    AppComponent,
+    CajaComponent,
+    EjemplosBindingComponent,
+    EjemplosComponentesComponent,
+    ListaContactosComponent
   ],
   providers: [ // metemos los servicios
 

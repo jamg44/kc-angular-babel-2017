@@ -1,59 +1,34 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { Contacto } from './entidades/contacto';
 
 @Component({
   selector: 'my-app',
-  template: `
-    <h1>Hello {{alumnos}}</h1>
-    <h2> Y el número de la suerte es: {{ numeroDeLaSuerte }} </h2>
-    <textarea [rows]="textAreaLineas"></textarea>
-    <div [class.caja]="pintamosClase"></div>
-    <div [ngClass]="clases"></div>
-    <p [style.color]="obtenerColor()">buenos dias</p>
-    <p [ngStyle]="obtenerEstilos()">buenas tardes</p>
-    <button (click)="mostrarMensaje()">Mostrar mensaje</button>
-    <input [(ngModel)]="mensaje" type="text"/>
-    {{ mensaje }}
-    `,
-  styles: [`
-    .caja {
-      width: 50px;
-      height: 50px;
-      background-color: red;
-    }
-  `]
+  templateUrl: '/app/app.component.html'
 })
-export class AppComponent  {
-  alumnos: string = 'Babel';
+export class AppComponent implements OnInit {
 
-  numeroDeLaSuerte: number = 43;
 
-  // binding de propiedades
-  textAreaLineas: number = 6;
+  listaContactos: Contacto[];
 
-  // binding de clases
-  pintamosClase: boolean = true;
-  clases: any = { uno: false, dos: true};
-
-  mensaje: string = 'cambiame';
-
-  constructor() {
+  ngOnInit(): void {
+    this.listaContactos = [
+      {
+        nombre: 'Steve Jobs',
+        email: 'steve.jobs@apple.com',
+        telefono: '64237846246'
+      },
+      {
+        nombre: 'Bill Gates',
+        email: 'bill.gates@microsoft.com',
+        telefono: '21878216381'
+      },
+      {
+        nombre: 'Elon Musk',
+        email: 'elon.musk@tesla.com',
+        telefono: '981293998711289'
+      }
+    ];
   }
 
-  // binding de estilos
-  obtenerColor(): string {
-    return 'green';
-  }
-
-  obtenerEstilos(): any {
-    return {
-      backgroundColor: 'red', // background-color, sin guiones!!!!!
-      color: 'white'
-    };
-  }
-
-  mostrarMensaje(): void {
-    alert('Hola señores');
-  }
 
 }
