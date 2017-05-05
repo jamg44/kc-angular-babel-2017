@@ -10,6 +10,7 @@ import { ListaContactosComponent } from './lista-contactos/lista-contactos.compo
 import { ContactosService } from './servicios/contactos.service';
 import { DetallesContactoComponent } from './detalles-contacto/detalles-contacto.component';
 import { Servicio1, Servicio2Provider, EjemplosInyeccionComponent } from './ejemplos/ejemplos-inyeccion.component';
+import { FormualarioContactoComponent } from './formulario-contacto/formulario-contacto.component';
 
 @NgModule({
   imports: [ // metemos todos los módulos que necesita mi app
@@ -23,7 +24,8 @@ import { Servicio1, Servicio2Provider, EjemplosInyeccionComponent } from './ejem
     EjemplosComponentesComponent,
     ListaContactosComponent,
     DetallesContactoComponent,
-    EjemplosInyeccionComponent
+    EjemplosInyeccionComponent,
+    FormualarioContactoComponent
   ],
   providers: [ // metemos los servicios
     ContactosService,

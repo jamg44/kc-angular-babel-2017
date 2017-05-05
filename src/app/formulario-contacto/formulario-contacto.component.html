@@ -1,0 +1,86 @@
+<form #contactoForm="ngForm" (ngSubmit)="notificarContacto(contactoForm)" novalidate>
+  <!-- Nombre -->
+  <div>
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre"
+           name="nombre"
+           ngModel
+           #nombreRef="ngModel"
+           placeholder="Ej. Tim"
+           required
+           minlength="2">
+    <div class="mensaje-error"
+         *ngIf="nombreRef.touched && nombreRef.errors?.required">
+      El campo nombre es requerido
+    </div>
+    <div class="mensaje-error"
+         *ngIf="nombreRef.touched && nombreRef.errors?.minlength">
+      El campo nombre debe tener al menos
+      {{ nombreRef.errors.minlength.requiredLength }} letras
+    </div>
+  </div>
+
+  <!-- Apellidos -->
+  <div>
+    <label for="apellidos">Apellidos</label>
+    <input type="text" id="apellidos"
+           name="apellidos"
+           ngModel
+           #apellidosRef="ngModel"
+           placeholder="Ej. Cook"
+           required
+           minlength="2">
+    <div class="mensaje-error"
+         *ngIf="apellidosRef.touched && apellidosRef.errors?.required">
+      El campo apellidos es requerido
+    </div>
+    <div class="mensaje-error"
+         *ngIf="apellidosRef.touched && apellidosRef.errors?.minlength">
+      El campo apellidos debe tener al menos
+      {{ apellidosRef.errors.minlength.requiredLength }} letras
+    </div>
+  </div>
+
+  <!-- Email -->
+  <div>
+    <label for="email">Email</label>
+    <input type="email" id="email"
+           name="email"
+           ngModel
+           placeholder="Ej. asdsa@asdas.zz"
+           >
+  </div>
+
+  <!-- Telefono -->
+  <div>
+    <label for="telefono">Telefono</label>
+    <input type="text" id="telefono"
+           name="telefono"
+           ngModel
+           placeholder="Ej. 600112233">
+  </div>
+
+  <!-- Facebook -->
+  <div>
+    <label for="facebook">Facebook</label>
+    <input type="text" id="facebook"
+           name="facebook"
+           ngModel
+           placeholder="Ej. asdsaasdad">
+  </div>
+
+  <!-- Twitter -->
+  <div>
+    <label for="twitter">Twitter</label>
+    <input type="text" id="twitter"
+           name="twitter"
+           ngModel
+           placeholder="Ej. asdsaasdad">
+  </div>
+
+  <!-- Guardar contacto -->
+  <button type="submit"
+          class="button-primary"
+          [disabled]="contactoForm.invalid">Guardar</button>
+
+</form>

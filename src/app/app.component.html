@@ -10,6 +10,7 @@
     <h1>Mi agenda</h1>
   </header>
 
+  <formulario-contacto (formularioAceptado)="guardarContacto($event)"></formulario-contacto>
 
   <!-- Colección de contactos -->
   <lista-contactos [contactos]="listaContactos"
