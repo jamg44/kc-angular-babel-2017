@@ -1,6 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
 import { CajaComponent } from './ejemplos/caja.component';
@@ -15,7 +16,8 @@ import { FormualarioContactoComponent } from './formulario-contacto/formulario-c
 @NgModule({
   imports: [ // metemos todos los módulos que necesita mi app
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   declarations: [ // metemos todos los componentes, directivas y pipes
     AppComponent,

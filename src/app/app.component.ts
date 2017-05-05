@@ -16,7 +16,10 @@ export class AppComponent implements OnInit {
   constructor( private _contactosService: ContactosService) {}
 
   ngOnInit(): void {
-    this.listaContactos = this._contactosService.obtenerContactos();
+    this._contactosService.obtenerContactos()
+                          .subscribe(contactos => {
+                            this.listaContactos = contactos;
+                          });
   }
 
   mostrarDetalles(contacto: Contacto): void {
@@ -29,6 +32,7 @@ export class AppComponent implements OnInit {
   }
 
   guardarContacto(contacto: Contacto) {
-    console.log(contacto);
+    this._contactosService.guardarContacto(contacto)
+                          .subscribe(contacto => {});
   }
 }
