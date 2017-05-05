@@ -1,8 +1,21 @@
 
-<div>
+<div *ngIf="contacto">
+
+  <!-- Avatar -->
+  <img [src]="contacto?.avatar" alt="avatar">
 
   <!-- Nombre del contacto -->
-  <h5>{{ contacto?.nombre }}</h5>
+  <h5>{{ contacto?.nombre }} {{ contacto?.apellido}}</h5>
+  <hr>
+
+  <!-- Redes sociales -->
+  <button type="button" (click)="notificarFacebook()">
+    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+  </button>
+
+  <button type="button" (click)="notificarTwitter()">
+    <i class="fa fa-twitter-square" aria-hidden="true"></i>
+  </button>
 
   <!-- Correo del contacto -->
   <span>{{ contacto?.email }}</span>
