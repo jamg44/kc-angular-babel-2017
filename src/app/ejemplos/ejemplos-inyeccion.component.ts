@@ -18,7 +18,7 @@ export const Servicio2Provider = {
 // usamos los servicios de arriba
 @Component({
   selector: 'ejemplos-inyeccion',
-  templateUrl: '/app/ejemplos/ejemplos-inyeccion.component.html'
+  templateUrl: './ejemplos-inyeccion.component.html'
 })
 export class EjemplosInyeccionComponent {
 

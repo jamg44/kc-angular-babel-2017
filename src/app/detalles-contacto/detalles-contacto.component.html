@@ -1,13 +1,13 @@
 
-<div *ngIf="contacto">
+<div class="u-full-width" *ngIf="contacto">
   <!-- Con la directiva *ngIf escribimos o no todo el elemento
        en el DOM, en función de una expresión -->
 
   <!-- Avatar -->
-  <img [src]="contacto?.avatar">
+  <img [src]="contacto.avatar">
 
   <!-- Nombre del contacto -->
-  <h5>{{ contacto?.nombre }} {{ contacto?.apellido}}</h5>
+  <h5>{{ contacto.nombre }} {{ contacto.apellidos }}</h5>
   <hr>
 
   <!-- Redes sociales -->
@@ -20,8 +20,8 @@
   </button>
 
   <!-- Correo del contacto -->
-  <span>{{ contacto?.email }}</span>
+  <span>{{ contacto.email }}</span>
 
   <!-- Telefono del contacto -->
-  <span>{{ contacto?.telefono }}</span>
+  <span>{{ contacto.telefono }}</span>
 </div>

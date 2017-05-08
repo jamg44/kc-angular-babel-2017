@@ -1,14 +1,24 @@
 {
   "contactos": [
     {
-      "nombre": "dsfsdafds",
-      "apellidos": "fsdfsdfsd",
-      "email": "",
-      "telefono": "",
-      "twitter": "",
-      "facebook": "",
+      "nombre": "Tim",
+      "apellidos": "Cook",
+      "email": "tim@apple.com",
+      "telefono": "45345345345",
+      "twitter": "timcook",
+      "facebook": "timcook",
       "avatar": "",
       "id": 1
+    },
+    {
+      "nombre": "Bill",
+      "apellidos": "Gates",
+      "email": "bilbates@microsoft.com",
+      "telefono": "75675675765",
+      "twitter": "billgates",
+      "facebook": "bilgates",
+      "avatar": "",
+      "id": 2
     }
   ]
 }

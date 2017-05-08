@@ -12,12 +12,17 @@ import { ContactosService } from './servicios/contactos.service';
 import { DetallesContactoComponent } from './detalles-contacto/detalles-contacto.component';
 import { Servicio1, Servicio2Provider, EjemplosInyeccionComponent } from './ejemplos/ejemplos-inyeccion.component';
 import { FormualarioContactoComponent } from './formulario-contacto/formulario-contacto.component';
+import { AppRoutingModule } from './app-routing.module';
+import { MisContactosComponent } from './mis-contactos/mis-contactos.component';
+import { NuevoContactoComponent } from './nuevo-contacto/nuevo-contacto.component';
+import { ContactosResolve } from './servicios/contactos-resolve.service';
 
 @NgModule({
   imports: [ // metemos todos los módulos que necesita mi app
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   declarations: [ // metemos todos los componentes, directivas y pipes
     AppComponent,
@@ -27,12 +32,15 @@ import { FormualarioContactoComponent } from './formulario-contacto/formulario-c
     ListaContactosComponent,
     DetallesContactoComponent,
     EjemplosInyeccionComponent,
-    FormualarioContactoComponent
+    FormualarioContactoComponent,
+    MisContactosComponent,
+    NuevoContactoComponent
   ],
   providers: [ // metemos los servicios
     ContactosService,
     Servicio1, // este servicio tiene @Injectable
-    Servicio2Provider
+    Servicio2Provider,
+    ContactosResolve
   ],
   bootstrap: [ // componente raiz de enuestra app
     AppComponent

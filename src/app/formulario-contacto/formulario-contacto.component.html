@@ -1,8 +1,10 @@
 <form #contactoForm="ngForm" (ngSubmit)="notificarContacto(contactoForm)" novalidate>
   <!-- Nombre -->
-  <div>
+  <div class="row">
+    <div class="offset-by-three six columns">
     <label for="nombre">Nombre</label>
     <input type="text" id="nombre"
+           class="u-full-width"
            name="nombre"
            ngModel
            #nombreRef="ngModel"
@@ -18,12 +20,15 @@
       El campo nombre debe tener al menos
       {{ nombreRef.errors.minlength.requiredLength }} letras
     </div>
+    </div>
   </div>
 
   <!-- Apellidos -->
-  <div>
+  <div class="row">
+    <div class="offset-by-three six columns">
     <label for="apellidos">Apellidos</label>
     <input type="text" id="apellidos"
+           class="u-full-width"
            name="apellidos"
            ngModel
            #apellidosRef="ngModel"
@@ -40,47 +45,64 @@
       {{ apellidosRef.errors.minlength.requiredLength }} letras
     </div>
   </div>
+  </div>
 
   <!-- Email -->
-  <div>
+  <div class="row">
+    <div class="offset-by-three six columns">
     <label for="email">Email</label>
     <input type="email" id="email"
+           class="u-full-width"
            name="email"
            ngModel
            placeholder="Ej. asdsa@asdas.zz"
            >
   </div>
+  </div>
 
   <!-- Telefono -->
-  <div>
+  <div class="row">
+    <div class="offset-by-three six columns">
     <label for="telefono">Telefono</label>
     <input type="text" id="telefono"
+           class="u-full-width"
            name="telefono"
            ngModel
            placeholder="Ej. 600112233">
   </div>
+  </div>
 
   <!-- Facebook -->
-  <div>
+  <div class="row">
+    <div class="offset-by-three six columns">
     <label for="facebook">Facebook</label>
     <input type="text" id="facebook"
+           class="u-full-width"
            name="facebook"
            ngModel
            placeholder="Ej. asdsaasdad">
   </div>
+  </div>
 
   <!-- Twitter -->
-  <div>
+  <div class="row">
+    <div class="offset-by-three six columns">
     <label for="twitter">Twitter</label>
     <input type="text" id="twitter"
+           class="u-full-width"
            name="twitter"
            ngModel
            placeholder="Ej. asdsaasdad">
   </div>
+  </div>
 
-  <!-- Guardar contacto -->
-  <button type="submit"
-          class="button-primary"
-          [disabled]="contactoForm.invalid">Guardar</button>
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <!-- Guardar contacto -->
+      <button type="submit"
+              class="button-primary u-full-width"
+              [disabled]="contactoForm.invalid">Guardar</button>
+  </div>
+  </div>
 
 </form>
