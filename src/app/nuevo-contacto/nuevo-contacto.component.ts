@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Contacto } from '../entidades/contacto';
 import { ContactosService } from '../servicios/contactos.service';
 
@@ -9,11 +10,17 @@ import { ContactosService } from '../servicios/contactos.service';
 })
 export class NuevoContactoComponent {
 
-  constructor(private _contactosService: ContactosService) {}
+  constructor(
+    private _contactosService: ContactosService,
+    private _router: Router
+  ) {}
 
   guardarContacto(contacto: Contacto) {
     this._contactosService.guardarContacto(contacto)
-                          .subscribe(contacto => alert('creado'));
+                          .subscribe(contacto => {
+                            // navegar a mis contactos
+                            this._router.navigate(['mis-contactos']);
+                          });
   }
 
 

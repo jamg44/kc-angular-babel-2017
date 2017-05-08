@@ -1,4 +1,11 @@
 <form #contactoForm="ngForm" (ngSubmit)="notificarContacto(contactoForm)" novalidate>
+
+  <div class="row">
+    <div class="offset-by-three six columns avatar">
+      <img [src]="rutaAvatar" alt="">
+    </div>
+  </div>
+
   <!-- Nombre -->
   <div class="row">
     <div class="offset-by-three six columns">

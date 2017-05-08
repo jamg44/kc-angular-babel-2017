@@ -19,6 +19,26 @@
       "facebook": "bilgates",
       "avatar": "",
       "id": 2
+    },
+    {
+      "nombre": "Austin",
+      "apellidos": "Powers",
+      "email": "austin@powers.com",
+      "telefono": "543543534",
+      "twitter": "austinpowers",
+      "facebook": "austinpowers",
+      "avatar": "",
+      "id": 3
+    },
+    {
+      "nombre": "Steve",
+      "apellidos": "Jobs",
+      "email": "stevejobs@apple.com",
+      "telefono": "543532423423",
+      "twitter": "stevejobs",
+      "facebook": "stevejobs",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/andrewabogado/128.jpg\n",
+      "id": 4
     }
   ]
 }
