@@ -20,6 +20,8 @@ import { ProveedorDirecciones } from './configuracion/direcciones';
 import { EjemplosObservablesComponent, EjemplosObservablesWikipediaComponent } from './ejemplos/ejemplos-observables.component';
 import { EjemplosPipeComponent } from './ejemplos/ejemplos-pipe.component';
 import { OrdenarPipe } from './pipes/ordenar.pipe';
+import { EjemplosDirectivasComponent } from './ejemplos/ejemplos-directivas.component';
+import { EjemplosDirectivasAtributoDirective } from './ejemplos/ejemplos-directivas.directive';
 
 @NgModule({
   imports: [ // metemos todos los módulos que necesita mi app
@@ -42,7 +44,8 @@ import { OrdenarPipe } from './pipes/ordenar.pipe';
     EjemplosObservablesComponent,
     EjemplosObservablesWikipediaComponent,
     EjemplosPipeComponent,
-    OrdenarPipe
+    OrdenarPipe,
+    EjemplosDirectivasComponent, EjemplosDirectivasAtributoDirective
   ],
   providers: [ // metemos los servicios
     ContactosService,
